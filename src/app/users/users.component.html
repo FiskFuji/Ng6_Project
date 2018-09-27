@@ -1,0 +1,12 @@
+<h1>Users</h1>
+
+<ul [@listStagger]="users$">
+  <li *ngFor="let u of users$">
+    <a routerLink="/details/{{u.id}}">{{u.name}}</a>
+
+    <ul>
+      <li>{{u.email}}</li>
+      <li><a href="http://{{u.website}}">{{u.website}}</a></li>
+    </ul>
+  </li>
+</ul>
